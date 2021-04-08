@@ -12,6 +12,7 @@ class Solution {
         if(x==0){
             return out=0;
         }
+
         int a=0;//有几位数
         int b;//余数
         int[] c=new int[10];
@@ -32,7 +33,10 @@ class Solution {
             out+=c[i]*Math.pow(10, e);
             e--;
         }  
-        if(out>=)
+
+        if(out>=(Math.pow(2,31)-1)||out<=Math.pow(-2,31))
+            out=0;
+
         return out;
     
     }
