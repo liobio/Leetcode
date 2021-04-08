@@ -15,7 +15,7 @@ class Solution {
 
         int a=0;//有几位数
         int b;//余数
-        int[] c=new int[10];
+        int[] c=new int[10];//可以去掉数组存储 由out接受数据
         int d=10;//权重初始值
         while(true){
             
@@ -26,7 +26,6 @@ class Solution {
                 break;
             }
             a++;
-
         } 
         int e=a;
         for(int i=0;i<=a;i++){
@@ -40,6 +39,20 @@ class Solution {
         return out;
     
     }
+    /*  
+    int rev = 0;
+        while (x != 0) {
+            int pop = x % 10;//每次的余数
+            x /= 10;//去掉尾数
+
+            if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
+            if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
+
+            rev = rev * 10 + pop;
+        }
+        return rev;
+
+    */
 }
 // @lc code=end
 
